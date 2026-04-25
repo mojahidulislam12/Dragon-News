@@ -11,7 +11,7 @@ const Header = () => {
   //   day: "numeric", // 25
   // });
   return (
-    <div className="text-center py-12.5 space-y-4">
+    <div className="text-center pt-12.5 space-y-4">
       <Image
         src={logo}
         width={300}
