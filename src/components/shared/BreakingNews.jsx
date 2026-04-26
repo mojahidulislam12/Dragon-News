@@ -17,13 +17,15 @@ const news = [
 ];
 const BreakingNews = () => {
   return (
-    <div className="max-w-285 mx-auto p-4 bg-[#F3F3F3] flex justify-between items-center gap-4 mt-7.5">
-      <button className="btn bg-[#D72050] text-white">Latest</button>
-      <Marquee className="gap-10" pauseOnHover={true}>
-        {news.map((n, i) => (
-          <span key={i}> {n.title}</span>
-        ))}
-      </Marquee>
+    <div>
+      <div className="max-w-285 mx-auto p-4 bg-[#F3F3F3] flex justify-between items-center gap-4 mt-7.5">
+        <button className="btn bg-[#D72050] text-white">Latest</button>
+        <Marquee className="gap-10" pauseOnHover={true}>
+          {news.map((n, i) => (
+            <span key={i}> {n.title}</span>
+          ))}
+        </Marquee>
+      </div>
     </div>
   );
 };
