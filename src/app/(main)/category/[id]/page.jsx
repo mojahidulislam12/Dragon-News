@@ -1,4 +1,5 @@
 import LeftSideBar from "@/components/HomePage/News/LeftSideBar";
+import NewsCard from "@/components/HomePage/News/NewsCard";
 import RightSideBae from "@/components/HomePage/News/RightSideBae";
 import { getCategory, getNewsByCategoryId } from "@/lib/data";
 import React from "react";
@@ -15,15 +16,13 @@ const CategoryPage = async ({ params }) => {
         <div className="font-bold text-3xl bg-white  col-span-3">
           <LeftSideBar categories={categories} activeId={id}></LeftSideBar>
         </div>
-        <div className="font-bold text-3xl bg-white col-span-6">
+        <div className="  bg-white col-span-6">
           <h1 className="font-semibold text-[20px] text-[#403F3F]">
             Dragon News Home
           </h1>
           <div className="space-y-4">
             {news.map((n, i) => (
-              <div className="p-6 rounded-md" key={i}>
-                {n.title}
-              </div>
+              <NewsCard news={n} key={i}></NewsCard>
             ))}
           </div>
         </div>
